@@ -1,0 +1,49 @@
+inherits:
+  - strictness_high
+
+ignore-paths:
+  - venv
+  - .pytest_cache/
+  - ecommerce/ecommerce/tests/
+  - ecommerce/manage.py
+  - ecommerce/ecommerce/settings/
+  - ecommerce/ecommerce/product/migrations/
+  - ecommerce/ecommerce/product/apps.py
+  - ecommerce/ecommerce/product/admin.py
+
+
+
+output-format: grouped
+
+test-warnings: true
+doc-warnings: true
+
+autodetect: false
+
+pep8:
+  run: true
+
+pylint:
+  run: true
+  options:
+    ignored-classes: pytest
+  disable:
+    - missing-module-docstring
+    - import-error
+    - unused-argument
+    - missing-class-docstring
+    - invalid-str-returned
+    - super-with-arguments
+    - protected-access
+    - keyword-arg-before-vararg
+
+pydocstyle:
+  disable:
+    - D100
+    - D103
+    - D211
+    - D212
+    - D106
+    - D105
+    - D417
+    - D104
